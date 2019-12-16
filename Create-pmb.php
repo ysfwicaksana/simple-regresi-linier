@@ -72,6 +72,8 @@ $regresi = new RegresiLinier($arrayTahun, $arrayJumlah);
 
     if($_GET['notify'] == 'error') {
       echo "<p class='text-danger'>Tahun Penerimaan sudah ada<p>";
+    } else if($_GET['notify'] == 'error2'){
+      echo "<p class='text-danger'>Tahun Penerimaan atau Jumlah Pendaftar </p>";
     }
 
 } ?>
@@ -133,7 +135,7 @@ $regresi = new RegresiLinier($arrayTahun, $arrayJumlah);
         <div class="form-group row">
           <label for="inputPassword" class="col-sm-2 col-form-label">Jumlah Pendaftar</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputPassword" name="jumlah">
+            <input type="text" class="form-control" id="inputPassword" name="jumlah" required>
           </div>
         </div>
 

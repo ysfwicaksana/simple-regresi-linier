@@ -14,6 +14,8 @@ $connect = openConnection();
 $tahun = preventInjection($_POST['tahun']);
 $jumlah = preventInjection($_POST['jumlah']);
 
+
+
 $check = mysqli_query($connect,"select * from pmb where tahun_penerimaan ='$tahun'");
 if(mysqli_num_rows($check) > 0) {
   header("Location:create-pmb.php?notify=error");
