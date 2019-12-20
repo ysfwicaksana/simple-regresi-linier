@@ -12,7 +12,7 @@ $connect = openConnection();
 
 $id = $_GET['id'];
 
-if (mysqli_query($connect,"delete from pmb where id='$id'")) {
+if (mysqli_query($connect,"delete from pmb_fakultas where id='$id'")) {
    header('Location:create-pmb.php');
 } else {
   echo "Error deleting record: " . mysqli_error($conn);

@@ -3,6 +3,8 @@
 require ('config/Database.php');
 require ('libraries/RegresiLinier.php');
 
+error_reporting(0);
+
 session_start();
 
 if(!isset($_SESSION['username'])) {
@@ -21,7 +23,6 @@ if($tahun = mysqli_query($connect,'select tahun_penerimaan,jumlah_pendaftar from
 
   }
 }
-
 
 $regresi = new RegresiLinier($arrayTahun, $arrayJumlah);
 ?>

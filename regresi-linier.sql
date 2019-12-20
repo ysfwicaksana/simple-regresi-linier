@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2019 at 04:10 AM
+-- Generation Time: Dec 20, 2019 at 09:06 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -40,16 +40,45 @@ CREATE TABLE `pmb` (
 --
 
 INSERT INTO `pmb` (`id`, `tahun_penerimaan`, `jumlah_pendaftar`, `created_at`) VALUES
-(1, 2000, 45, '2019-12-07 03:34:44'),
-(2, 2001, 48, '2019-12-07 03:39:05'),
-(3, 2002, 51, '2019-12-07 03:39:05'),
-(4, 2003, 51, '2019-12-07 03:39:05'),
-(5, 2004, 52, '2019-12-07 03:39:05'),
-(6, 2005, 54, '2019-12-07 03:39:05'),
-(7, 2006, 61, '2019-12-07 03:39:05'),
-(8, 2007, 67, '2019-12-07 03:39:05'),
-(9, 2008, 69, '2019-12-07 03:39:05'),
-(10, 2009, 70, '2019-12-07 03:39:05');
+(18, 2008, 319, '2019-12-20 07:50:02'),
+(19, 2009, 594, '2019-12-20 08:03:53');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pmb_fakultas`
+--
+
+CREATE TABLE `pmb_fakultas` (
+  `id` int(11) NOT NULL,
+  `tahun_penerimaan` year(4) NOT NULL,
+  `fakultas` varchar(20) NOT NULL,
+  `jumlah_pendaftar` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pmb_fakultas`
+--
+
+INSERT INTO `pmb_fakultas` (`id`, `tahun_penerimaan`, `fakultas`, `jumlah_pendaftar`) VALUES
+(6, 2008, 'FIKES', 68),
+(7, 2008, 'FT', 48),
+(8, 2008, 'FAPERTA', 27),
+(9, 2008, 'FASILKOM', 15),
+(10, 2008, 'FEB', 86),
+(11, 2008, 'FISIP', 17),
+(12, 2008, 'FH', 58),
+(13, 2008, 'FKIP', 0),
+(14, 2008, 'FAI', 0),
+(15, 2009, 'FIKES', 33),
+(16, 2009, 'FT', 83),
+(17, 2009, 'FAPERTA', 48),
+(18, 2009, 'FASILKOM', 95),
+(19, 2009, 'FEB', 107),
+(20, 2009, 'FISIP', 24),
+(21, 2009, 'FH', 72),
+(22, 2009, 'FKIP', 12),
+(23, 2009, 'FAI', 120);
 
 -- --------------------------------------------------------
 
@@ -82,6 +111,12 @@ ALTER TABLE `pmb`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `pmb_fakultas`
+--
+ALTER TABLE `pmb_fakultas`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -95,7 +130,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `pmb`
 --
 ALTER TABLE `pmb`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT for table `pmb_fakultas`
+--
+ALTER TABLE `pmb_fakultas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `users`
